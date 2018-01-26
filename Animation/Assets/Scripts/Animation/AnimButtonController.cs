@@ -58,8 +58,8 @@ public class AnimButtonController : MonoBehaviour {
 		rb.AddForce (new Vector3(0.0f, 10.0f, 0.0f), ForceMode.Impulse);
 		anim.SetBool ("esta_saltando", true);
 	}
-
+	/*
 	void OnCollisionEnter(){
 		anim.SetBool ("esta_saltando", false);
-	}
+	}*/
 }

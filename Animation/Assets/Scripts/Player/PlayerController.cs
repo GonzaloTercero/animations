@@ -16,4 +16,7 @@ public class PlayerController : MonoBehaviour {
 			transform.Translate (transform.forward * verticalMovement * Time.deltaTime);
 		}
 	}
+
+	public void moveForward(){
+	}
 }

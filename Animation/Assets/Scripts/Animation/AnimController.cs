@@ -37,8 +37,7 @@ public class AnimController : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision c){
-		if(c.gameObject.tag == "ground"){
 		anim.SetBool ("esta_saltando", false);
-		}
+		
 	}
 }
