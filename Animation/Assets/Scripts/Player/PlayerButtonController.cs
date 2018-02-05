@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class PlayerButtonController : MonoBehaviour {
 
 
+	public AudioClip normalWalking;
+	public AudioClip speedWalking;
+	public AudioClip stepWalking;
+
 	public Text lifeText;
 	private int life;
 
@@ -15,8 +19,11 @@ public class PlayerButtonController : MonoBehaviour {
 	private int speed;
 	private Vector3 movement;
 	private int active;
+
+	private AudioSource audio;
+
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		movement = transform.position;
 		this.speed = 1;
 		active = 0;
@@ -25,6 +32,8 @@ public class PlayerButtonController : MonoBehaviour {
 
 		life = 100;
 		score = 0;
+
+		audio = GameObject.Find("Body").GetComponent<AudioSource> ();
 	}
 
 
@@ -33,6 +42,11 @@ public class PlayerButtonController : MonoBehaviour {
 		//if (verticalMovement != 0.0f) {
 		if(active == 1){
 			transform.Translate (movement *speed* Time.deltaTime);
+			if(audio.isPlaying == false){
+				audio.clip = this.ClipToSound();
+				audio.Play ();	
+			}
+
 		}
 
 		PintarScoreYLife ();
@@ -79,7 +93,15 @@ public class PlayerButtonController : MonoBehaviour {
 		this.lifeText.text = "estoy parado";
 	}
 
+	private AudioClip ClipToSound(){
+		AudioClip localAudio = this.stepWalking;
 
+		if (Input.GetKey(KeyCode.LeftShift)) {
+			localAudio = this.speedWalking;
+		}
+
+		return localAudio;
+	}
 
 
 

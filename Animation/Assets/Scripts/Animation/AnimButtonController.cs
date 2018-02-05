@@ -6,8 +6,9 @@ public class AnimButtonController : MonoBehaviour {
 
 	private Animator anim;
 	private Rigidbody rb;
+
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		anim = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody> ();
 	}

@@ -56,8 +56,6 @@
      <Compile Include="Assets\Scripts\Animation\AnimButtonController.cs" />
      <Compile Include="Assets\Scripts\Animation\AnimController.cs" />
      <Compile Include="Assets\Scripts\ApplicationManager.cs" />
-     <Compile Include="Assets\Scripts\ButtonScripts\DownButton.cs" />
-     <Compile Include="Assets\Scripts\ButtonScripts\UpButton.cs" />
      <Compile Include="Assets\Scripts\ChangeColor.cs" />
      <Compile Include="Assets\Scripts\DragMe.cs" />
      <Compile Include="Assets\Scripts\DragPanel.cs" />
@@ -75,6 +73,7 @@
      <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
      <None Include="Assets\Textures and Sprites\SF UI\Background\LICENSE.txt" />
      <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
+     <None Include="Assets\FootstepsSoundsCarpetPack\FootstepsSoundsCarpetPackInfo.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
