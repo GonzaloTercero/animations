@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 162252300}
   - component: {fileID: 162252305}
   - component: {fileID: 162252306}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 319166632}
   - component: {fileID: 319166631}
   - component: {fileID: 319166630}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pie2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 32
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!195 &362858691
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1121,9 +1121,9 @@ GameObject:
   - component: {fileID: 689829629}
   - component: {fileID: 689829628}
   - component: {fileID: 689829631}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2508,7 +2508,7 @@ GameObject:
   - component: {fileID: 1312668101}
   - component: {fileID: 1312668100}
   - component: {fileID: 1312668099}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pie1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2675,8 +2675,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1325980129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9700012, y: 2.6000001, z: 11.7}
-  m_LocalScale: {x: 4.91, y: 1, z: 8.18}
+  m_LocalPosition: {x: -1.9700012, y: 2.6000001, z: 12.3}
+  m_LocalScale: {x: 4.91, y: 1, z: 6.75}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -2881,7 +2881,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1364707407}
   m_LocalRotation: {x: 0, y: 0, z: -0.033975102, w: 0.99942267}
-  m_LocalPosition: {x: 18.43, y: -2.1, z: 7.99}
+  m_LocalPosition: {x: 17.63, y: -2.15, z: 7.99}
   m_LocalScale: {x: 0.67, y: 1, z: 0.51}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3053,8 +3053,6 @@ GameObject:
   - component: {fileID: 1483436159}
   - component: {fileID: 1483436160}
   - component: {fileID: 1483436161}
-  - component: {fileID: 1483436162}
-  - component: {fileID: 1483436163}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3082,7 +3080,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1483436158}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 261b1729c71b06e4cb095b1b792fed81, type: 3}
   m_Name: 
@@ -3098,49 +3096,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1483436158}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4890f3330ce1fb47a9f18453da2a174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioWalking: {fileID: 8300000, guid: ba16e14e7ef305b459c9e932d31a31fa, type: 3}
---- !u!195 &1483436162
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1483436158}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &1483436163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1483436158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf7184e893add1f4aa73dfc40e05479e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  positions:
-  - {fileID: 67437643}
-  - {fileID: 972906319}
-  - {fileID: 856803800}
-  - {fileID: 1472733154}
 --- !u!1 &1558400287
 GameObject:
   m_ObjectHideFlags: 0
@@ -4316,7 +4277,7 @@ GameObject:
   - component: {fileID: 2036155193}
   - component: {fileID: 2036155192}
   - component: {fileID: 2036155191}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
