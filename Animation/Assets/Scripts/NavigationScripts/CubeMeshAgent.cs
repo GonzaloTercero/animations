@@ -4,37 +4,40 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class CubeMeshAgent : MonoBehaviour {
-	[SerializeField]
-	Transform location;
+	
 	NavMeshAgent iaAgent;
 
-	Vector3 initPosition;
-	Vector3 secondPosition;
-	Vector3 actualWayPoint;
- 	// Use this for initialization
+
+	//WayPoints
+	[SerializeField]
+	Transform[] positions;
+
+	Transform actualWayPoint;
+	int index;
+
+	// Use this for initialization
 	void Awake () {
-		initPosition = this.transform.position;
-		secondPosition = this.initPosition + new Vector3 (10.0f, 0.0f, 8.0f);
-		actualWayPoint = secondPosition;
+		index = 0;
+		actualWayPoint = positions[index];
 
 		iaAgent = GetComponent<NavMeshAgent> ();
-		iaAgent.SetDestination (actualWayPoint);
+		iaAgent.SetDestination (actualWayPoint.position);
 	}
 
 	void Update(){
-		Debug.Log (Vector3.Distance(actualWayPoint, this.transform.position));
-		if(Vector3.Distance(actualWayPoint, this.transform.position) < 1.0f){
+		Debug.Log (Vector3.Distance(actualWayPoint.position, this.transform.position));
+		if( iaAgent.remainingDistance < 2.5f){
 			UpdateActualWayPoint ();
 		}
 	}
 
 	void UpdateActualWayPoint(){
-		if (actualWayPoint == initPosition) {
-			actualWayPoint = secondPosition;
-		} else {
-			actualWayPoint = initPosition;
-		}
-		iaAgent.SetDestination (actualWayPoint);
+		index = (index+1)% 4;
+		/*if(index >= 4){
+			index = 0;
+		}*/
+		actualWayPoint = positions[index];
+		iaAgent.SetDestination (actualWayPoint.position);
 	}
 
 
