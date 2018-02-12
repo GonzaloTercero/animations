@@ -44,13 +44,12 @@ public class CubeMeshAgent : MonoBehaviour {
 	private bool CheckIfPlayerIsNear(){
 		bool playerIsNear = false;
 		int layerMask = 1 << 8;
-		Collider[] listOfColliders = Physics.OverlapSphere (this.transform.position, 20.0f, layerMask);
+		Collider[] listOfColliders = Physics.OverlapSphere (this.transform.position, 6.0f, layerMask);
 
 		int index = 0;
 
 		while(index <listOfColliders.Length){
-			//if (listOfColliders [index].name == "Body") {
-				//playerIsNear = true;
+			playerIsNear = true;
 				Renderer _m = listOfColliders [index].gameObject.GetComponent<Renderer> ();
 				if (_m != null) {
 					Debug.Log ("Color Changed");
